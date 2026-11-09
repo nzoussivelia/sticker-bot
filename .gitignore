@@ -1,0 +1,7 @@
+node_modules/
+stickers/
+patch*.js
+patch6.js
+fix-render.js
+qr.png
+*.log
