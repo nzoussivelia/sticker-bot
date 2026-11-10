@@ -121,7 +121,7 @@ async function start(){
     if (!jid.endsWith('@g.us')) return;
     const sender = msg.key.participant || msg.key.remoteJid;
     const senderNum = sender.split('@')[0];
-    const text = msg.message.conversation || msg.message.extendedTextMessage?.text || "";
+    const text = msg.message.conversation || msg.message.extendedTextMessage?.text ||'' ;
     const cmd = text.toLowerCase().trim();
     if (!data[jid]) data[jid] = { users:{}, hashes:{}, week:{}, month:{}, weekKey:getWeekKey(), monthKey:getMonthKey() };
     if (data[jid].weekKey !== getWeekKey()){ data[jid].week={}; data[jid].weekKey=getWeekKey(); save(); }
