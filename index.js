@@ -9,7 +9,7 @@ const { default: makeWASocket, useMultiFileAuthState, DisconnectReason, download
 const { Boom } = require('@hapi/boom');
 const pino = require('pino');
 const fs = require('fs')
-
+if (!fs.existsSync('./stickers')) fs.mkdirSync('./stickers', {recursive: true});
 // ===== CLASSEMENT AUTO - AJOUTE PAR CHEF =====
 const HIST_FILE = 'historique.json';
 let historique = [];
